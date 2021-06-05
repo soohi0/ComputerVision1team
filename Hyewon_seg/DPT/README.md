@@ -31,7 +31,11 @@ Segmentation:
 3) Set up dependencies: 
 
     ```shell
-    conda install pytorch torchvision opencv 
+    conda install pytorch torchvision opencv
+    (actually this shell is for GPU environment, if your environment is CPU and you dont have CUDA, then shell is down.
+    :참고 : https://pytorch.org/get-started/locally/)
+    $ conda install pytorch torchvision torchaudio cpuonly -c pytorch
+    
     pip install timm
     ```
 
