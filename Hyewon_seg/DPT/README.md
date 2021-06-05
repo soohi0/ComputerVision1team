@@ -30,12 +30,17 @@ Segmentation:
   
 3) Set up dependencies: 
 
+	(방법 1)
     ```shell
     conda install pytorch torchvision opencv
+    ```
     (actually this shell is for GPU environment, if your environment is CPU and you dont have CUDA, then shell is down.
     :참고 : https://pytorch.org/get-started/locally/)
+    	(방법 2)
+    ```shell
     $ conda install pytorch torchvision torchaudio cpuonly -c pytorch
-    
+    ```
+    ```shell
     pip install timm
     ```
 
