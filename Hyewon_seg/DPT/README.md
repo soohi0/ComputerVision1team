@@ -10,9 +10,15 @@ This repository contains code and models for our [paper](https://arxiv.org/abs/2
 * [March 2021] Initial release of inference code and models
 
 ### Setup 
-
-1) Download the model weights and place them in the `weights` folder:
-
+0) I recommend you make virtual environment. and activate it.
+- $ conda create -n 가상환경이름 python=버전(python version must be 3.6 or 3.7)
+- $ conda activate 가상환경 이름
+- 만약에 가상환경 list를 확인하고 싶을 때 -> conda info -e
+- 가상환경 종료 시 : conda deactivate
+1) when you create virtual environment, install conda, opencv
+- conda install conda
+- conda install openCV
+2) Download the model weights and place them in the `weights` folder:
 
 Monodepth:
 - [dpt_hybrid-midas-501f0c75.pt](https://github.com/intel-isl/DPT/releases/download/1_0/dpt_hybrid-midas-501f0c75.pt), [Mirror](https://drive.google.com/file/d/1dgcJEYYw1F8qirXhZxgNK8dWWz_8gZBD/view?usp=sharing)
@@ -22,7 +28,7 @@ Segmentation:
  - [dpt_hybrid-ade20k-53898607.pt](https://github.com/intel-isl/DPT/releases/download/1_0/dpt_hybrid-ade20k-53898607.pt), [Mirror](https://drive.google.com/file/d/1zKIAMbltJ3kpGLMh6wjsq65_k5XQ7_9m/view?usp=sharing)
  - [dpt_large-ade20k-b12dca68.pt](https://github.com/intel-isl/DPT/releases/download/1_0/dpt_large-ade20k-b12dca68.pt), [Mirror](https://drive.google.com/file/d/1foDpUM7CdS8Zl6GPdkrJaAOjskb7hHe-/view?usp=sharing)
   
-2) Set up dependencies: 
+3) Set up dependencies: 
 
     ```shell
     conda install pytorch torchvision opencv 
@@ -30,10 +36,14 @@ Segmentation:
     ```
 
    The code was tested with Python 3.7, PyTorch 1.8.0, OpenCV 4.5.1, and timm 0.4.5
+   in Hyewon Version_ Python 3.6, Pytorch 1.7.1, OpenCV 3.3.1, and timm 0.4.9
 
 ### Usage 
 
 1) Place one or more input images in the folder `input`.
+- in this version, dir 'input_imgs' folder have images.
+- So copy those imgs to folder 'input'.
+- if you want to test more images, then input more images input.
 
 2) Run a monocular depth estimation model:
 
